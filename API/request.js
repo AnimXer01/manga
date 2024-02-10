@@ -1,4 +1,4 @@
-const baseUrl = "https://api.mangadex.org";
+const baseUrl = "https://animxer-api-2xwp.vercel.app/";
 
 export const makeRequest = async (endpoint, params = {}, filter = {}, config = {}) => {
     const url = new URL(`${baseUrl}${endpoint}`);
