@@ -47,7 +47,7 @@ export const fetchCoverImages = async (array, config = {}) => {
             const coverPromises = coverRelationships
                 ? coverRelationships.map(async (rel) => {
                     const response = await makeRequest(`/cover/${rel?.id}`, {}, {}, config);
-                    const coverUrl = `https://api.mangadex.org/covers/${manga.id}/${response?.data?.attributes?.fileName}.256.jpg`;
+                    const coverUrl = `https://api.mangadex.org/manga/{id}${response?.data?.attributes?.fileName}.256.jpg`;
 
                     Object.assign(manga, { cover: coverUrl });
                     return manga;
