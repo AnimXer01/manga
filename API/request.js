@@ -1,4 +1,4 @@
-const baseUrl = "https://animxer-api-2xwp.vercel.app/";
+const baseUrl = "https://animxer-api-2xwp.vercel.app";
 
 export const makeRequest = async (endpoint, params = {}, filter = {}, config = {}) => {
     const url = new URL(`${baseUrl}${endpoint}`);
